@@ -18,6 +18,7 @@ export default class WordCard extends Component {
         this.state = prepareStateFromWord(this.props.value)
     }
 	activationHandler = (c) => { 
+		console.log(`${c} has been activated.`)
 		let guess = [...this.state.guess, c]
 		this.setState({guess})
 		if(guess.length == this.state.chars.length){
@@ -26,18 +27,20 @@ export default class WordCard extends Component {
 		if(guess.join('').toString() == this.state.word){
 		this.setState({guess: [], completed: true})
 		}else{
-		this.setState({guess: [], attempt: this.state.attempt + 1})
+			this.setState({guess: [], attempt: this.state.attempt + 1})
+			document.getElementById('result').innerHTML = `Try again (${this.state.attempt})  `
+        	if(this.state.attempt == 3){
+            	document.getElementById('result').innerHTML = `GameOver (wait 3 sec to newgame) `
+            	setTimeout(() =>  window.location.reload(false),2000) 
 		}
 		}  
 	}
-
-	render() {
+}
+	render(){
 		return (
-		<div>
-	   { Array.from(this.props.value).map((c, i) => <CharacterCard value={c} key={i} activationHandler={this.activationHandler}/>) }
-		</div>
-		);
+			<div>
+				{ Array.from(this.props.value).map((c, i) => <CharacterCard value={c} key={i} activationHandler={this.activationHandler} {...this.state}/>) }
+			 </div>
+		)
 		}
-	   
-	
 }
