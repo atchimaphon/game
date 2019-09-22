@@ -22,6 +22,7 @@ class App extends Component {
         <h2 id="word">
           <WordCard value={item.toUpperCase()}/>
         </h2>
+        <h2 id="input"></h2>
         <h2 id="complete"></h2>
         <h2 id="newgame"></h2>
         <h2 id="ans"></h2> 

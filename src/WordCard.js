@@ -21,6 +21,7 @@ export default class WordCard extends Component {
 		console.log(`${c} has been activated.`)
 		let guess = [...this.state.guess, c]
 		this.setState({guess})
+		document.getElementById('input').innerHTML = `Your input = ${guess.join('->').toString()}`
 		if(guess.length == this.state.chars.length){
 			console.log(guess.join('').toString())
             console.log(this.state.chars.join('').toString())
@@ -34,7 +35,7 @@ export default class WordCard extends Component {
 			document.getElementById('result').innerHTML = `Already played ${this.state.attempt}`
 			document.getElementById('play').innerHTML = `Can play again ${5-this.state.attempt} `
 			if(this.state.attempt == 5){
-				document.getElementById('ans').innerHTML = `Correct Answer  = ${this.state.chars.join('').toString()} (5 second Newgame)`
+				document.getElementById('ans').innerHTML = `Correct Answer  = ${this.state.chars.join('->').toString()} (5 second Newgame)`
 				document.getElementById('result').innerHTML = `GameOver (5 second Newgame)`
 				setTimeout(() =>  window.location.reload(false),2000) 
 		}
