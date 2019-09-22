@@ -74,7 +74,7 @@
 #result{
   font-size: 1.5em;
 }
-#newgame{
+#newgame,#close{
   font-size: 1.5em;
   background-color: rgb(235, 37, 113);
   
