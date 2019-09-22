@@ -43,7 +43,8 @@
   border-radius: 50% ;
   padding: 10px;
   box-shadow: 5px 5px 8px rgb(255, 153, 0), 10px 10px 8px rgb(251, 255, 0), 15px 15px 8px rgb(147, 250, 29);
- }
+  font-family: "School Holic 5";
+}
  .activeCard {
   color: red;
   background: pink;
@@ -59,20 +60,23 @@
   bottom:0;
   min-width: 0px;
   min-height: 0px;
+  font-size: 2em;
+  font-family: "Volkszeitung 21";
 }
 #ans{
   font-size: 3em;
   color: #f70909;
-
+  font-family: "Volkszeitung 21";
 }
 #play{
-  font-size: 1.5em;
+  font-size: 3em;
   color: #0f0f0f;
   background-clip: content-box;
-  
+  font-family: "Volkszeitung 21";
 }
 #result{
-  font-size: 1.5em;
+  font-size: 3em;
+  font-family: "Volkszeitung 21";
 }
 #newgame,#close{
   font-size: 3em;
@@ -82,23 +86,24 @@
   box-shadow: 0 9px #999;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+  font-family: "School Holic 7";
 }
 body{
   background : url(./background.jpg);
 }
 #word{
   color: pink;
-  
-  
 }
 #welcome{
-  font-size: 3em;
+  font-family: "SwEeT yElLoW";
   text-shadow: 2px 2px 8px rgb(255, 174, 0);
-  
+  font-size: 8em;
 }
 #again{
-  font-size: 1em;
+  font-size: 2em;
+  font-family: "Volkszeitung 21";
 }
 #input{
   font-size: 3em;
+  font-family: "Volkszeitung 21";
 }
