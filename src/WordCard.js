@@ -28,12 +28,12 @@ export default class WordCard extends Component {
 			this.setState({guess: [], complete: true})
 			document.getElementById('complete').innerHTML = `Congratulations!`
 			document.getElementById('newgame').style.display = "inline-block";
-			document.getElementById('surrender').style.display = "none";
 			setTimeout(() =>  window.location.reload(false),2000)
 		}else{
 			this.setState({guess: [], attempt: this.state.attempt + 1})
-			document.getElementById('result').innerHTML = `Try again ${this.state.attempt} `
-        	if(this.state.attempt == 5){
+			document.getElementById('result').innerHTML = `Already played ${this.state.attempt}`
+			document.getElementById('play').innerHTML = `Can play again ${5-this.state.attempt} `
+			if(this.state.attempt == 5){
 				document.getElementById('ans').innerHTML = `Correct Answer  = ${this.state.chars.join('').toString()}`
 				document.getElementById('result').innerHTML = `GameOver`
 				setTimeout(() =>  window.location.reload(false),2000) 

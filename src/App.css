@@ -47,3 +47,10 @@
  .button {
    margin: 1em;
  }
+#media{
+  position: center;
+  right: 0;
+  bottom:0;
+  min-width: 0px;
+  min-height: 0px;
+}
