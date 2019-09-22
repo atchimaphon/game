@@ -39,13 +39,19 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin: 1em;
   user-select: none;
+  background-color: black;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 5px 8px rgb(255, 153, 0), 10px 10px 8px rgb(251, 255, 0), 15px 15px 8px rgb(147, 250, 29);
  }
  .activeCard {
   color: red;
   background: pink;
+  background-color: rgb(12, 11, 11);
  }
  .button {
    margin: 1em;
+   
  }
 #media{
   position: center;
@@ -53,4 +59,39 @@
   bottom:0;
   min-width: 0px;
   min-height: 0px;
+}
+#ans{
+  font-size: 1.5em;
+  color: #f70909;
+
+}
+#play{
+  font-size: 1.5em;
+  color: #0f0f0f;
+  background-clip: content-box;
+  
+}
+#result{
+  font-size: 1.5em;
+}
+#newgame{
+  font-size: 1.5em;
+  background-color: rgb(235, 37, 113);
+  
+}
+body{
+  background : url(./background.jpg);
+}
+#word{
+  color: pink;
+  
+  
+}
+#welcome{
+  font-size: 3em;
+  text-shadow: 2px 2px 8px rgb(255, 174, 0);
+  
+}
+#again{
+  font-size: 1em;
 }
