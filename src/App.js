@@ -6,16 +6,23 @@ import Logo from "./logo.mp4";
 const word = ['stack','data','command','static','wireless'];
 var item = word[Math.floor(Math.random()*word.length)];
 
+
 class App extends Component {
   constructor(){
     super();
-    this.state ={requstAns : false }
+    this.state ={
+      requstAns : false   
+    }
+    this.url = "http://streaming.tdiradio.com:8000/house.mp3";
+    this.audio = new Audio(this.url);
+    console.log(this.audio);
+    this.audio.play();
   }
   newgame = () => {
     window.location.reload(false);
   }
   close = () =>{
-    window.close(true);
+    window.close();
   }
   requstAns = () => {
     this.setState({
@@ -25,10 +32,13 @@ class App extends Component {
   show = (answer) =>{
     document.getElementById('solve' ).innerHTML = `${answer}`
   }
+
+  
   render() {
     return (
       <div className = "App" >
         <h1 id="welcome">Welcome to Game</h1>
+      
         <h2 id="play"></h2>
         <h2 id="word">
         { 
@@ -49,7 +59,6 @@ class App extends Component {
           <video controls autostart autoPlay src={Logo} type="logo/mp4" />
           <h4>Atchimaphon Supharat 6010110399</h4>
         </div>
-        
       </div>
     );
   }
