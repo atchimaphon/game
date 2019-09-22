@@ -64,7 +64,7 @@
   font-family: "Volkszeitung 21";
 }
 #ans{
-  font-size: 3em;
+  font-size: 3.5em;
   color: #f70909;
   font-family: "Volkszeitung 21";
 }
@@ -73,12 +73,19 @@
   color: #0f0f0f;
   background-clip: content-box;
   font-family: "Volkszeitung 21";
+  width:300px;
+  margin: auto;
+  border: 1px solid red;
+  
 }
 #result{
   font-size: 3em;
   font-family: "Volkszeitung 21";
+  width:600px;
+  margin: auto;
+  border: 1px solid red;
 }
-#newgame,#close{
+#newgame,#close,#show{
   font-size: 3em;
   background-color: rgb(235, 37, 113);
   border: none;
@@ -100,10 +107,31 @@ body{
   font-size: 8em;
 }
 #again{
-  font-size: 2em;
-  font-family: "Volkszeitung 21";
-}
-#input{
   font-size: 3em;
   font-family: "Volkszeitung 21";
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-right: 35%;
+  margin-left: 35%;
+  background-color: rgb(248, 186, 196);
+}
+#input{
+  font-size: 3.5em;
+  font-family: "Volkszeitung 21";
+  border: 2px solid black;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-right: 20%;
+  margin-left: 20%;
+  background-color: rgb(193, 233, 247);
+}
+#solve{
+  font-size: 3.5em;
+  font-family: "Volkszeitung 21";
+  border: 2px solid black;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-right: 30%;
+  margin-left: 30%;
+  background-color: rgb(245, 143, 143);
 }
